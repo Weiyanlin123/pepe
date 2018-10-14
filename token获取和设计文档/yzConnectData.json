@@ -1,0 +1,50 @@
+[
+    {
+        "auth": "",
+        "host": "172.28.15.107",
+        "name": "辽宁-开发",
+        "port": 7379,
+        "ssh_port": 22,
+        "timeout_connect": 60000,
+        "timeout_execute": 60000
+    },
+    {
+        "auth": "afgWuu6r0DL",
+        "host": "172.28.22.97",
+        "name": "业支--能力、统一token、sourceid",
+        "port": 7379,
+        "ssh_port": 22,
+        "timeout_connect": 60000,
+        "timeout_execute": 60000
+    },
+    {
+        "auth": "3obztCSr",
+        "host": "172.28.22.98",
+        "name": "业支联调api",
+        "port": 7379,
+        "ssh_port": 22,
+        "timeout_connect": 60000,
+        "timeout_execute": 60000
+    }
+]
+
+
+SELECT * from source_ip WHERE sourceid='100000' and originip='112.17.79.154/32';
+
+INSERT INTO `source_ip` (
+	sourceid,
+	originip,
+	whitelisttype,
+	allow,
+	create_time,
+	update_time
+)
+VALUES
+	(
+		'001002',
+		'124.42.103.132/32',
+		'10',
+		'000',
+		now(),
+		now()
+	);
